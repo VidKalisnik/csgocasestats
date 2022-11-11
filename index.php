@@ -1,18 +1,4 @@
-<!-- 
 
-
-
-
-
-    PROFESOR VINKO V KODI JE NAREJENO ;)
-
-
-
-
-
-
-
--->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
