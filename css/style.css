@@ -1,0 +1,451 @@
+:root{
+    font-size: 16px;
+    --color1: Black;
+    --color2:white;
+    --color3: #A8A8A8;
+    --background:#E8E8E8;
+}
+
+body{
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* INDEX */
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.93fr 2.63fr 2.63fr 2.81fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: 
+        "nav case1 case2 case3"
+        "nav graph graph random";
+}
+
+.case1{
+    grid-area: case1;
+}
+
+.case2{
+    grid-area: case2;
+}
+
+.case3{
+    grid-area: case3;
+}
+.graph{
+    grid-area: graph;
+}
+.random{
+    grid-area: random;
+}
+
+
+/* NAVBAR */
+.navbar-div{
+    display: flex;
+    justify-content: center;
+       
+    grid-area: nav;
+}
+
+.navbar-align{
+    align-items: center;
+}
+.navbar{
+    width: 4rem;
+    height: 90vh;
+    position: fixed;
+    background-color: var(--color2);
+
+    border-radius: 50px;
+
+    transition: width 600ms ease;
+}
+
+.shadow{
+    box-shadow: 0px 8px 24px rgba(23, 23, 20, 0.15);
+}
+
+.flex-center{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+/* tazadnga dol da */
+.nav-item:last-child{
+    fill: var(--color1);
+    margin-top: auto;
+}
+
+.nav-item:first-child{
+    margin-bottom: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    color: var(--color3);
+    text-decoration: none;
+}
+
+/*ni text */
+.link-text{
+    display:none;
+    font-weight: bold;
+}
+
+.nav-link svg{
+    fill: var(--color3);
+    min-width: 2rem;
+    margin: 0 1rem;
+}
+
+.nav-link img{
+    margin: 0 0.78rem;
+}
+
+.navbar:hover{
+    width: 9rem;
+    border-radius: 30px;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+
+.nav-item a:hover,
+.nav-item svg:hover{
+    fill: black;
+    color:black;
+}
+
+.logo{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Active site */
+.active span{
+    color: var(--color1);
+}
+.active svg{
+    fill: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.active svg:hover{
+    fill: var(--color2);
+}
+
+
+/* MAIN*/
+
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.zgornji{
+    margin-top: auto;
+}
+
+.spodnji{
+    margin-top: 50px;
+}
+
+.black-box{
+    background-color: var(--color1);
+    height: 250px;
+    position: absolute;
+    z-index: 0;
+    margin-top: -35px;
+    border-radius: 30px;
+}
+
+.white-box{
+    position: relative;
+    background-color: var(--color2);
+    margin-bottom: 30px; 
+    border-radius: 40px;
+    z-index: 1;
+
+
+    transition: height 600ms ease;
+}
+
+
+
+.wb-small{
+    height: 300px;
+    width: 75%;
+}
+
+.wb-big{
+    height: 300px;
+    width: 88%;
+}
+
+.bb-small{
+    width: 200px;
+}
+
+.bb-big{
+    width: 400px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.black-box-text{
+    font-size: 16px;
+    color: var(--color2);
+    margin-top: 10px ;
+}
+
+.img-center {
+    display: block;
+    margin: auto;
+    width: 68%;
+}
+ 
+.case1 .case-name,
+.case2 .case-name,
+.case3 .case-name,
+.random .case-name{
+    display: none;
+}
+
+.expand .white-box:hover{
+    height: 330px; 
+}
+
+.white-box:hover .case-name{
+    display: block;
+}
+
+.together{
+    text-decoration: none;
+    color: var(--color1);
+}
+
+
+/* CASES */
+
+.container-cases{
+    display: grid;
+    grid-template-columns: 1.93fr 8.07fr;
+    grid-template-areas: 
+        "nav cases";
+}
+
+.cases{
+    grid-area: cases;
+    height: 100vh;
+    margin-top: 7%;
+    margin-right: 18%;
+}
+
+.cases-table{
+    width: 80%;
+}
+
+.navbar-margin{
+    padding: 15%;
+}
+
+.table-margin{
+    padding: 5%;
+}
+
+.table-1row{
+    color: var(--color3);
+}
+
+.clickable-row:hover{
+    cursor: pointer;
+}
+
+/*CASE*/
+
+.case-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.93fr 2.63fr 5.44fr;
+    grid-template-rows: 3.64fr 0.99fr 5.37fr;
+    grid-template-areas:     
+        "nav case graph2"
+        "nav case data"
+        "nav skins skins";
+} 
+.case{
+    grid-area: case;
+}
+
+.graph2{
+    grid-area: graph2;
+    position: relative;
+}
+
+.data{
+    grid-area: data;
+}
+
+.skins{
+    grid-area: skins;
+}
+
+.case .together{
+    margin-top: auto;
+}
+
+.case .wb-medium{
+    height: 90%;
+    width: 80%;
+}
+.graph2 .wb-medium{
+    height: 70%;
+    width: 90%;
+    bottom: 0;
+    position: absolute;
+}
+
+.case-table {
+    border-collapse: collapse;
+    border-radius:30px;
+    overflow: hidden;
+    width: 90%; 
+    background: black;  
+    border: none;
+}
+
+.data th {
+    padding: 0.4em;
+    color: var(--color3);
+}
+
+.data td {
+    padding: 1em;
+}
+
+.data-column{
+    text-align: center; 
+    background: white;
+}
+
+.skins-box{
+    width: 93.5%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 5%;
+}
+
+.img-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-text{
+    display: none;
+}
+
+.active{
+    display: flex;
+}
+
+.img-text img{
+    height: 50%;
+    width: 50%;
+}
+
+.text{
+    text-align: center;
+}
+
+.tabela td{
+    text-align: center;
+}
+
+.prev, .next{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1080px){
+    .wb-big{
+        height: 200px;
+        width: 88%;
+    }
+
+    .wb-small{
+        height: 200px;
+        width: 88%;
+    }
+
+    .bb-small{
+        width: 150px;
+        height: 100px;
+    }
+    
+    .bb-big{
+        width: 300px;
+        height: 100px;
+    }
+
+    .expand .white-box:hover{
+        height: 250px; 
+    }
+
+}
+
+@media only screen and (max-height: 790px){
+    .wb-big{
+        height: 200px;
+    }
+
+    .wb-small{
+        height: 200px;
+    }
+
+    .bb-small{
+        height: 100px;
+    }
+    
+    .bb-big{
+        height: 100px;
+    }
+
+    .expand .white-box:hover{
+        height: 250px; 
+    }
+}
+
+@media only screen and (max-width: 650px){
+    body{
+        display: none;
+    }
+}
